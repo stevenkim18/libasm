@@ -2,6 +2,7 @@
 
 int     ft_strlen(char *s);
 char    *ft_strcpy(char *dest, char *src);
+int     ft_strcmp(char *s1, char *s2);
 
 int     main(void)
 {
@@ -9,5 +10,9 @@ int     main(void)
         printf("\"\"%d\n\n", ft_strlen(""));
 
         char    dest[10];
-        printf("%s\n", ft_strcpy(dest, "Hello"));
+        printf("%s\n\n", ft_strcpy(dest, "Hello"));
+
+        printf("a ''%d\n", ft_strcmp("a", ""));
+        printf("'' a%d\n", ft_strcmp("", "a"));
+        printf("abc abc%d\n", ft_strcmp("abc", "abc"));
 }

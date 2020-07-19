@@ -14,5 +14,5 @@ loop:
         jmp     loop                    
 
 return:
-        mov     rax, rdi
-        ret
+        mov     rax, rdi                ; rdi 주소 -> rax
+        ret                             ; rax return
