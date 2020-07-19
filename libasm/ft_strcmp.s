@@ -1,8 +1,12 @@
 section .text
         global _ft_strcmp
 
-_ft_strcmp:                              ;rdi = s1 rsi = s2
+_ft_strcmp:                             ;rdi = s1 rsi = s2
         mov     rcx, 0                  ;i = 0
+        cmp     rdi, 0
+        je      error
+        cmp     rsi, 0
+        je      error
         jmp     loop
 
 loop:
@@ -21,3 +25,7 @@ return:
         sub     dl, BYTE [rsi + rcx]    ;s1[i] - s2[i]
         movsx   rax, dl                 ;mov 명렬어는 길이가 같은 것 끼리만 이동 
         ret                             ;movsx 사용해서 길이 상관없이 가능하게 해줌
+
+error:
+        mov     rax, 0
+        ret

@@ -2,7 +2,7 @@ section .text
         global _ft_strcpy
 
 _ft_strcpy:                             ; dest = rdi, src = rsi
-        mov     rcx, 0                  ; i = 0          
+        mov     rcx, 0                  ; i = 0        
         jmp     loop
 
 loop:
