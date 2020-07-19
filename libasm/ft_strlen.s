@@ -7,9 +7,9 @@ _ft_strlen:
 
 loop:
         cmp     BYTE [rdi + rax], 0 ; 1바이트의 주소가 가르키는 값과 0 비교 -> if (str[i] == 0)
-        je      return
-        inc     rax
+        je      return              ; je = jump if equal
+        inc     rax                 ; inc 1 증가
         jmp     loop
 
 return:
-        ret
+        ret                         ; ret -> rax 값 리턴
