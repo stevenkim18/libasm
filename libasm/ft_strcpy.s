@@ -14,5 +14,6 @@ loop:
         jmp     loop                    
 
 return:
+        mov     BYTE [rdi + rcx], 0
         mov     rax, rdi                ; rdi 주소 -> rax
         ret                             ; rax return

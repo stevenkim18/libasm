@@ -13,5 +13,5 @@ _ft_strdup:                         ; rdi = str
         pop     rdi                 
         mov     rsi, rdi
         mov     rdi, rax
-        call    _ft_strcpy
-        ret
+        call    _ft_strcpy          ; ft_strcpy(rdi, rsi) -> return rai(dest:rdi 주소 리턴)
+        ret                         ; return rai

@@ -70,6 +70,7 @@ int     test_strcmp(void)
     printf("------------------------------------------\n");
     printf("*               test_strcmp              *\n");
     printf("------------------------------------------\n");
+    printf("strcmp:		%d\nft_strcmp:	%d\n__\n",strcmp("a",""),ft_strcmp("a",""));
     printf("strcmp:		%d\nft_strcmp:	%d\n__\n",strcmp("hey",""),ft_strcmp("hey",""));
 	printf("strcmp:		%d\nft_strcmp:	%d\n__\n",strcmp("célestin  le peetit coquin","célestin  le petit coquin"),ft_strcmp("célestin  le peetit coquin","célestin  le petit coquin"));
 	printf("strcmp:		%d\nft_strcmp:	%d\n__\n",strcmp("célestin  le petit coquin","célestin  le petit coquin"),ft_strcmp("célestin  le petit coquin","célestin  le petit coquin"));
@@ -119,8 +120,8 @@ int     test_read(void)
     printf("*                test_read               *\n");
     printf("------------------------------------------\n");
     int bufferlen = 50;
-    int fd_1 = open("src/ft_write.s", O_RDONLY);
-    int fd_ft_1 = open("src/ft_write.s", O_RDONLY);
+    int fd_1 = open("ft_write.s", O_RDONLY);
+    int fd_ft_1 = open("ft_write.s", O_RDONLY);
 
     char buffer[bufferlen + 1];
     char ft_buffer[bufferlen + 1];

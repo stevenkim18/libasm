@@ -3,9 +3,9 @@ section .text
 
 _ft_strcmp:                             ;rdi = s1 rsi = s2
         mov     rcx, 0                  ;i = 0
-        cmp     rdi, 0
+        cmp     rdi, 0                  ;rdi == 0 --> error
         je      error
-        cmp     rsi, 0
+        cmp     rsi, 0                  ;rsi == 0 --> error
         je      error
         jmp     loop
 

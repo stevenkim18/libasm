@@ -14,10 +14,14 @@ all: $(NAME)
 $(NAME): $(OBJS)
 		ar rc $(NAME) $(OBJS)
 
+test:
+		gcc main.c $(NAME)
+
 clean:
 		rm -rf *.o
 
 fclean: clean
+		rm ./a.out
 		rm $(NAME)
 
 re: fclean all
